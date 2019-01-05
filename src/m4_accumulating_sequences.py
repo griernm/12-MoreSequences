@@ -404,12 +404,12 @@ def rectangles_from_circles(circles):
     #            in this function, so DON'T draw anything in here!
     ###########################################################################
     # -------------------------------------------------------------------------
-    rectangles = []
+    rec = []
     for k in range(len(circles)):
         corner1 = rg.Point(circles[k].center.x - circles[k].radius, circles[k].center.y - circles[k].radius)
         corner2 = rg.Point(circles[k].center.x + circles[k].radius, circles[k].center.y + circles[k].radius)
-        rectangles = rectangles + rg.Rectangle(corner1, corner2)
-    return rectangles
+        rec.append(rg.Rectangle(corner1, corner2))
+    return rec
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
